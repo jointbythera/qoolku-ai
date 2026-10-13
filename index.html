@@ -6,41 +6,42 @@
 <meta name="description" content="Qoolku AI membantu merapikan spesifikasi customer dan menyimulasikan costing serta quotation.">
 <title>Qoolku AI — Quotation Made Simple</title>
 <style>
-:root{color-scheme:light;--bg:#f8fafc;--panel:#ffffff;--line:#dce5ed;--text:#142334;--muted:#526579;--mint:#245fd1;--accent-text:#ffffff;--preview-shadow:#172b3a18;--pill-bg:#e7efff;--chat-bg:#f1f5fa;--user-bg:#e1eaf4;--agent-bg:#e7f0ff;--scenario-active:#eaf1ff}
-:root[data-theme="dark"]{color-scheme:dark;--bg:#0c1114;--panel:#151d21;--line:#2c393e;--text:#edf5f3;--muted:#a9bab8;--mint:#baf5ce;--accent-text:#0c1114;--preview-shadow:#0004;--pill-bg:#263d31;--chat-bg:#10181b;--user-bg:#2a383e;--agent-bg:#1d3328;--scenario-active:#21352b}
+:root{color-scheme:dark;--bg:#0c1114;--panel:#151d21;--line:#2c393e;--text:#edf5f3;--muted:#a9bab8;--mint:#baf5ce}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,sans-serif}a{color:inherit}button{font:inherit}button,a{-webkit-tap-highlight-color:transparent}button:focus-visible,a:focus-visible{outline:3px solid var(--mint);outline-offset:5px}
-.wrap{width:min(1100px,90%);margin:auto}nav{display:flex;align-items:center;justify-content:space-between;padding:25px 0;border-bottom:1px solid var(--line)}.brand{font-weight:750;letter-spacing:-.5px;text-decoration:none;font-size:22px}.mark{display:inline-grid;place-items:center;background:var(--mint);color:var(--accent-text);border-radius:12px;width:38px;height:38px;margin-right:10px}.navlink{font-size:14px;text-decoration:none;color:var(--muted)}
-.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:center;padding:85px 0 75px}.eyebrow{font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--mint);font-weight:600}.badge{display:inline-block;color:var(--mint);border:1px solid var(--line);border-radius:30px;padding:7px 12px;font-size:13px;margin:12px 0}h1{font-size:clamp(44px,6vw,76px);line-height:1.08;letter-spacing:-3px;margin:18px 0}h1 span{color:var(--mint)}.lead{color:var(--muted);max-width:530px;margin:24px 0 30px}.btn{display:inline-block;background:var(--mint);color:var(--accent-text);border:0;border-radius:10px;padding:13px 21px;font-weight:700;text-decoration:none;cursor:pointer}.note{font-size:14px;color:var(--muted)}
-.preview{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:26px;transform:rotate(-2deg);box-shadow:0 25px 70px var(--preview-shadow)}.preview-top{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:16px}.pill{font-size:12px;background:var(--pill-bg);color:var(--mint);padding:4px 9px;border-radius:6px}.quote{font-size:18px;margin:25px 0}.flow{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:14px 0;color:var(--muted)}.flow b{color:var(--text)}.preview small{color:var(--muted)}
+.wrap{width:min(1100px,90%);margin:auto}nav{display:flex;align-items:center;justify-content:space-between;padding:25px 0;border-bottom:1px solid var(--line)}.brand{font-weight:750;letter-spacing:-.5px;text-decoration:none;font-size:22px}.mark{display:inline-grid;place-items:center;background:var(--mint);color:var(--bg);border-radius:12px;width:38px;height:38px;margin-right:10px}.navlink{font-size:14px;text-decoration:none;color:var(--muted)}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:center;padding:85px 0 75px}.eyebrow{font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--mint);font-weight:600}.badge{display:inline-block;color:var(--mint);border:1px solid var(--line);border-radius:30px;padding:7px 12px;font-size:13px;margin:12px 0}h1{font-size:clamp(44px,6vw,76px);line-height:1.08;letter-spacing:-3px;margin:18px 0}h1 span{color:var(--mint)}.lead{color:var(--muted);max-width:530px;margin:24px 0 30px}.btn{display:inline-block;background:var(--mint);color:var(--bg);border:0;border-radius:10px;padding:13px 21px;font-weight:700;text-decoration:none;cursor:pointer}.note{font-size:14px;color:var(--muted)}
+.preview{border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:26px;transform:rotate(-2deg);box-shadow:0 25px 70px #0004}.preview-top{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:16px}.pill{font-size:12px;background:#263d31;color:var(--mint);padding:4px 9px;border-radius:6px}.quote{font-size:18px;margin:25px 0}.flow{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:14px 0;color:var(--muted)}.flow b{color:var(--text)}.preview small{color:var(--muted)}
 section{padding:55px 0;border-top:1px solid var(--line)}h2{font-size:clamp(28px,4vw,40px);line-height:1.2;letter-spacing:-1px;margin:12px 0 25px}h3{font-size:21px;margin:0 0 15px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px}.solution{border-color:#5c816b}.card ul{margin:0;padding-left:20px;color:var(--muted)}.card li{margin:12px 0}.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.number{display:block;color:var(--mint);font-size:14px;margin-bottom:26px}.card p{color:var(--muted);margin:0}
-.demo-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px}.scenarios{display:grid;gap:12px;margin-top:24px}.scenario{text-align:left;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:15px 18px;cursor:pointer}.scenario:hover,.scenario[aria-pressed="true"]{border-color:var(--mint);background:var(--scenario-active)}.scenario small{display:block;color:var(--muted);font-size:14px;margin-top:3px}.chat{background:var(--chat-bg);border:1px solid var(--line);border-radius:14px;overflow:hidden}.chat-head{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px}.messages{padding:22px;min-height:370px}.empty{color:var(--muted);margin-top:70px;text-align:center}.bubble{white-space:pre-wrap;padding:15px 18px;border-radius:12px;margin-bottom:15px;font-size:15px;overflow-wrap:anywhere}.user{background:var(--user-bg);margin-left:35px}.agent{background:var(--agent-bg);margin-right:20px}.speaker{display:block;font-size:12px;color:var(--muted);margin-bottom:7px}.typing{color:var(--mint)}.typing span{animation:pulse 1s infinite}.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}@keyframes pulse{50%{opacity:.2}}
-.theme-toggle{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:10px;padding:8px 12px;cursor:pointer;font-size:13px;font-weight:650}.theme-toggle:hover{border-color:var(--mint)}.nav-actions{display:flex;align-items:center;gap:16px}
+.demo-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px}.scenarios{display:grid;gap:12px;margin-top:24px}.scenario{text-align:left;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:15px 18px;cursor:pointer}.scenario:hover,.scenario[aria-pressed="true"]{border-color:var(--mint);background:#21352b}.scenario small{display:block;color:var(--muted);font-size:14px;margin-top:3px}.chat{background:#10181b;border:1px solid var(--line);border-radius:14px;overflow:hidden}.chat-head{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px}.messages{padding:22px;min-height:370px}.empty{color:var(--muted);margin-top:70px;text-align:center}.bubble{white-space:pre-wrap;padding:15px 18px;border-radius:12px;margin-bottom:15px;font-size:15px;overflow-wrap:anywhere}.user{background:#2a383e;margin-left:35px}.agent{background:#1d3328;margin-right:20px}.speaker{display:block;font-size:12px;color:var(--muted);margin-bottom:7px}.typing{color:var(--mint)}.typing span{animation:pulse 1s infinite}.typing span:nth-child(2){animation-delay:.2s}.typing span:nth-child(3){animation-delay:.4s}@keyframes pulse{50%{opacity:.2}}
 footer{padding:45px 0 25px;border-top:1px solid var(--line)}.footer-top{display:flex;justify-content:space-between;align-items:center;gap:25px;margin-bottom:40px}.footer-top h2{margin:0 0 8px}.credit{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:20px}
 @media(max-width:760px){.hero{grid-template-columns:1fr;gap:35px;padding:50px 0}.preview{transform:none}.grid2,.caps,.demo-layout{grid-template-columns:1fr}h1{letter-spacing:-2px}.footer-top{align-items:flex-start;flex-direction:column}.card{padding:23px}.messages{min-height:320px;padding:16px}.navlink{font-size:13px}.badge{font-size:12px}.chat-head{padding:16px}.user{margin-left:15px}.agent{margin-right:10px}section{padding:40px 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.typing span{animation:none}}
+
+.live-toolbar{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:24px}.live-status{color:var(--muted);font-size:14px}.live-grid{display:grid;grid-template-columns:280px 1fr;gap:22px}.requests{display:grid;gap:12px;align-content:start}.request{width:100%;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;text-align:left;cursor:pointer}.request[aria-pressed="true"]{border-color:var(--mint);background:#21352b}.request span{display:block;color:var(--muted);font-size:13px;margin-top:8px}.detail{min-width:0}.specs{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin:20px 0}.specs div{padding:12px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}.specs dt{font-size:12px;color:var(--muted)}.specs dd{margin:4px 0 0}.result-status{display:inline-block;border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:13px;color:var(--mint)}.price{font-size:36px;letter-spacing:-1px;color:var(--mint);font-weight:750;margin:12px 0}.cost-table{width:100%;border-collapse:collapse;margin-top:15px}.cost-table td{padding:9px 0;border-bottom:1px solid var(--line)}.cost-table td:last-child{text-align:right}.detail details{margin-top:20px}.detail summary{cursor:pointer;color:var(--mint)}.live-empty{padding:30px;color:var(--muted);border:1px dashed var(--line);border-radius:12px}.btn:disabled{opacity:.6;cursor:wait}@media(max-width:760px){.live-grid,.specs{grid-template-columns:1fr}.requests{grid-template-columns:1fr 1fr}.price{font-size:30px}}@media(max-width:440px){.requests{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav aria-label="Navigasi utama"><a class="brand" href="#home"><span class="mark" aria-hidden="true">Q</span>Qoolku AI</a><div class="nav-actions"><a class="navlink" href="#demo">Coba simulasi</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Ganti tampilan ke dark mode">Dark mode</button></div></nav>
+<nav aria-label="Navigasi utama"><a class="brand" href="#home"><span class="mark" aria-hidden="true">Q</span>Qoolku AI</a><a class="navlink" href="#hasil">Lihat hasil workflow</a></nav>
 <main>
 <header class="hero" id="home">
-<div><div class="eyebrow">Asisten digital untuk quotation</div><div class="badge">🟢 Status: Active &amp; Ready 24/7</div><h1>Quotation<br><span>Made Simple.</span></h1><p class="lead">Dari chat customer ke spesifikasi yang jelas. Qoolku AI membantu mendeteksi informasi yang kurang, menyimulasikan costing, dan menyusun draft quotation.</p><a class="btn" href="#demo">Coba demo interaktif</a><p class="note">Demo simulasi · Belum terhubung ke tools eksternal</p></div>
+<div><div class="eyebrow">Asisten digital untuk quotation</div><div class="badge">🟢 Status: Active &amp; Ready 24/7</div><h1>Quotation<br><span>Made Simple.</span></h1><p class="lead">Dari chat customer ke spesifikasi yang jelas. Qoolku AI membantu mendeteksi informasi yang kurang, menyimulasikan costing, dan menyusun draft quotation.</p><a class="btn" href="#demo">Coba demo interaktif</a><p class="note">Demo workflow · Lihat hasil tersimpan di bawah</p></div>
 <div class="preview" aria-label="Contoh alur Qoolku AI"><div class="preview-top"><strong>Chat masuk, detail terurai.</strong><span class="pill">SIMULASI</span></div><p class="quote">“Mau pesan 100 box kemasan ukuran 20 × 15 × 8 cm.”</p><div class="flow"><span>01 / Spesifikasi</span><b>Terstruktur</b></div><div class="flow"><span>02 / Detail kurang</span><b>Terdeteksi</b></div><div class="flow"><span>03 / Quotation</span><b>Draft untuk ditinjau</b></div><small>Keputusan dan harga final tetap ditinjau manusia.</small></div>
 </header>
 <section aria-labelledby="problem-title"><div class="eyebrow">01 / Masalah &amp; solusi</div><h2 id="problem-title">Lebih jelas sejak chat pertama.</h2><div class="grid2"><article class="card"><h3>The Chaos</h3><ul><li>Spesifikasi customer sering tidak lengkap.</li><li>Perhitungan material dan costing masih manual.</li><li>Cek harga supplier memperlambat quotation.</li></ul></article><article class="card solution"><h3>The Solution</h3><ul><li>Ekstraksi detail pesanan dan pertanyaan untuk melengkapi spesifikasi.</li><li>Simulasi perhitungan dengan asumsi yang terlihat jelas.</li><li>Draft quotation dari harga input, dengan penanda harga yang perlu dikonfirmasi ke supplier.</li></ul></article></div></section>
 <section aria-labelledby="caps-title"><div class="eyebrow">02 / Kemampuan utama</div><h2 id="caps-title">Tiga langkah menuju draft quotation.</h2><div class="caps"><article class="card"><span class="number">01 / EKSTRAKSI</span><h3>Rapikan spesifikasi</h3><p>Ubah chat customer menjadi rincian produk, ukuran, jumlah, dan kebutuhan finishing.</p></article><article class="card"><span class="number">02 / VALIDASI</span><h3>Temukan detail kurang</h3><p>Tandai informasi yang belum tersedia dan susun pertanyaan lanjutan yang relevan.</p></article><article class="card"><span class="number">03 / SIMULASI</span><h3>Hitung &amp; susun draft</h3><p>Tampilkan contoh costing dan quotation berbasis asumsi, untuk diperiksa sebelum dikirim.</p></article></div></section>
 <section id="demo" aria-labelledby="demo-title"><div class="eyebrow">03 / Demo interaktif</div><h2 id="demo-title">Lihat Qoolku AI bekerja.</h2><div class="demo-layout"><div><p class="note">Pilih skenario untuk melihat contoh percakapan. Semua respons dan harga di demo ini adalah simulasi, bukan hasil AI live atau harga supplier terbaru.</p><div class="scenarios"><button class="scenario" type="button" data-scenario="0" aria-pressed="false">Ekstraksi spesifikasi<small>Dari pesan ke detail pesanan</small></button><button class="scenario" type="button" data-scenario="1" aria-pressed="false">Cek informasi yang kurang<small>Pertanyaan sebelum menghitung</small></button><button class="scenario" type="button" data-scenario="2" aria-pressed="false">Simulasi costing &amp; quotation<small>Contoh hitungan yang transparan</small></button></div></div><div class="chat"><div class="chat-head"><strong>Qoolku AI</strong><span class="pill">DEMO SIMULASI</span></div><div class="messages" id="messages" role="log" aria-live="polite" aria-relevant="additions" aria-busy="false"><p class="empty">Pilih salah satu skenario untuk memulai.</p></div></div></div></section>
+
+<section id="hasil" aria-labelledby="live-title">
+<div class="eyebrow">04 / Hasil workflow</div><h2 id="live-title">Dari chat ke keputusan quotation.</h2>
+<p class="note">Hasil AI dari workflow n8n, dibaca langsung dari Supabase. Pilih contoh untuk melihat spesifikasi dan langkah berikutnya. Harga menggunakan tarif rekaan untuk demo.</p>
+<div class="live-toolbar"><span id="live-status" class="live-status" role="status" aria-live="polite">Memuat data demo…</span><button id="refresh" class="btn" type="button">Perbarui data</button></div>
+<div class="live-grid"><div id="requests" class="requests" aria-label="Pilih permintaan demo"></div><div id="detail" class="detail" aria-live="polite"><div class="live-empty">Mengambil hasil workflow…</div></div></div>
+</section>
 </main>
 <footer><div class="footer-top"><div><h2>Mulai dari spesifikasi yang jelas.</h2><p class="note">Coba alurnya sebelum menyusun quotation berikutnya.</p></div><a class="btn" href="#demo">Coba demo Qoolku AI</a></div><div class="credit">Built with AI · AI Builder Bootcamp Showcase</div></footer>
 </div>
 <script>
-const themeButton=document.getElementById('theme-toggle');
-const savedTheme=(()=>{try{return localStorage.getItem('qoolku-theme')}catch{return null}})();
-const deviceDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
-function setTheme(theme){document.documentElement.dataset.theme=theme;themeButton.textContent=theme==='dark'?'Light mode':'Dark mode';themeButton.setAttribute('aria-label','Ganti tampilan ke '+(theme==='dark'?'light':'dark')+' mode')}
-setTheme(savedTheme==='dark'||savedTheme==='light'?savedTheme:(deviceDark?'dark':'light'));
-themeButton.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';setTheme(next);try{localStorage.setItem('qoolku-theme',next)}catch{}});
 const scenarios = [
 {user:'Saya mau 100 box kemasan, ukuran 20 × 15 × 8 cm, karton duplex 350 gsm, cetak full color, laminasi doff.',reply:'Spesifikasi berhasil dirapikan:\n• Produk: box kemasan\n• Jumlah: 100 unit\n• Ukuran: 20 × 15 × 8 cm\n• Material: karton duplex 350 gsm\n• Cetak: full color\n• Finishing: laminasi doff\n\nPerlu konfirmasi: cetak satu atau dua sisi, desain/dieline, serta tanggal dan alamat pengiriman. Costing belum final sebelum detail ini lengkap.'},
 {user:'Bisa buatkan quotation 100 box kemasan ukuran 20 × 15 × 8 cm?',reply:'Detail tersedia: box kemasan, 100 unit, ukuran 20 × 15 × 8 cm.\n\nSebelum dihitung, mohon lengkapi:\n1. Jenis dan ketebalan material?\n2. Cetak berapa warna dan sisi?\n3. Finishing apa yang dibutuhkan?\n4. Desain dan dieline sudah tersedia?\n5. Kapan dibutuhkan dan dikirim ke mana?\n\nHarga supplier juga perlu diinput atau dikonfirmasi manual. Saya belum terhubung ke supplier.'},
@@ -60,6 +61,64 @@ const typing=document.createElement('div');typing.className='bubble agent typing
 messages.append(typing);
 pending=setTimeout(()=>{typing.remove();messages.append(bubble('agent','Qoolku AI · Simulasi',scenario.reply));messages.setAttribute('aria-busy','false');},900);
 }));
+
+const SUPABASE_URL = 'https://orujynezfeuybgloizjo.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_YZHjwFV8sV1Cc7pZ5YaetA_ecG8zCC9';
+const requestList = document.getElementById('requests');
+const detail = document.getElementById('detail');
+const liveStatus = document.getElementById('live-status');
+const refresh = document.getElementById('refresh');
+let records = [], selectedId = null;
+const money = value => typeof value === 'number' && Number.isFinite(value) ? new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(value) : 'Belum dihitung';
+function el(tag, text, className){const node=document.createElement(tag);if(text!==undefined)node.textContent=String(text);if(className)node.className=className;return node;}
+function renderRecord(row){
+ selectedId=row.id;
+ [...requestList.children].forEach(button=>button.setAttribute('aria-pressed',String(Number(button.dataset.id)===row.id)));
+ const card=el('article',undefined,'card');
+ card.append(el('span',row.status==='needs_clarification'?'Perlu kelengkapan':'Spesifikasi siap ditinjau','result-status'),el('h3',row.product||'Permintaan demo'));
+ const specs=el('dl',undefined,'specs');
+ const fields=[['Jumlah','quantity'],['Ukuran','dimensions'],['Material','material'],['Cetak','printing'],['Finishing','finishing'],['Desain','design_status'],['Deadline','deadline'],['Pengiriman','delivery_location']];
+ fields.forEach(([label,key])=>{const cell=el('div');cell.append(el('dt',label),el('dd',row[key]??'Belum disebutkan'));specs.append(cell);});card.append(specs);
+ if(Array.isArray(row.notes)&&row.notes.length)card.append(el('p',row.notes.join(' · '),'note'));
+ const missing=Array.isArray(row.missing_fields)?row.missing_fields:[];
+ const questions=Array.isArray(row.follow_up_questions)?row.follow_up_questions:[];
+ if(missing.length || row.status==='needs_clarification'){
+  card.append(el('h3','Lengkapi sebelum menghitung'));
+  const list=el('ol');questions.forEach(q=>list.append(el('li',q)));card.append(list,el('p','Estimasi belum diberikan karena spesifikasi belum lengkap.','note'));
+ }else{
+  const c=row.costing;
+  if(c && c.status==='simulation_ready' && typeof c.estimated_total==='number'){
+   card.append(el('span','SIMULASI — bukan quotation final','pill'),el('div',money(c.estimated_total),'price'),el('p',`${row.quantity} box · ${money(c.estimated_unit_price)} per box`,'note'));
+   const disclosure=el('details');disclosure.append(el('summary','Lihat rincian biaya contoh'));
+   const table=el('table',undefined,'cost-table');
+   const rates=c.rates||{};
+   const lines=[['Material',rates.material_per_unit*row.quantity],['Cetak',rates.printing_per_unit*row.quantity],['Finishing',rates.finishing_per_unit*row.quantity],['Perakitan',rates.assembly_per_unit*row.quantity],['Setup',rates.setup],['Total biaya produksi',c.production_cost],['Markup '+rates.markup_percent+'%',c.estimated_total-c.production_cost]];
+   lines.forEach(([label,value])=>{const tr=el('tr');tr.append(el('td',label),el('td',money(value)));table.append(tr);});disclosure.append(table);card.append(disclosure,el('p',c.note,'note'));
+  }else card.append(el('p',c?.note||'Spesifikasi tersedia. Estimasi biaya belum tersimpan untuk permintaan ini.','note'));
+ }
+ card.append(el('p',`Referensi demo #${row.id} · Harga dan kelayakan produksi perlu ditinjau manusia.`,'note'));
+ detail.replaceChildren(card);
+}
+function renderRequests(){
+ requestList.replaceChildren();
+ records.forEach(row=>{const button=el('button',undefined,'request');button.type='button';button.dataset.id=row.id;button.setAttribute('aria-pressed','false');button.append(el('strong',row.product||'Permintaan demo'),el('span',`${row.quantity??'—'} unit · ${row.status==='needs_clarification'?'Perlu kelengkapan':'Spesifikasi lengkap'}`));button.addEventListener('click',()=>renderRecord(row));requestList.append(button);});
+ if(records.length)renderRecord(records.find(row=>row.id===selectedId)||records.find(row=>row.costing?.status==='simulation_ready')||records[0]);
+ else detail.replaceChildren(el('div','Belum ada data demo yang dapat ditampilkan.','live-empty'));
+}
+async function loadRecords(){
+ refresh.disabled=true;liveStatus.textContent='Memuat data demo…';
+ const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),15000);
+ try{
+  const response=await fetch(SUPABASE_URL+'/rest/v1/quotation_requests?select=id,created_at,product,quantity,dimensions,material,printing,finishing,design_status,deadline,delivery_location,notes,missing_fields,follow_up_questions,status,costing&order=id.asc&limit=20',{headers:{apikey:SUPABASE_KEY},signal:controller.signal,cache:'no-store'});
+  if(!response.ok)throw new Error('HTTP '+response.status);
+  const data=await response.json();if(!Array.isArray(data))throw new Error('Invalid response');
+  records=data;renderRequests();liveStatus.textContent=`Terhubung ke Supabase · ${records.length} contoh · Diperbarui ${new Date().toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'})}`;
+ }catch(error){liveStatus.textContent='Data gagal dimuat. Klik Perbarui data untuk mencoba lagi.';if(!records.length)detail.replaceChildren(el('div','Hasil belum tersedia. Periksa koneksi internet atau akses data demo.','live-empty'));}
+ finally{clearTimeout(timeout);refresh.disabled=false;}
+}
+refresh.addEventListener('click',loadRecords);
+loadRecords();
+
 </script>
 </body>
 </html>
