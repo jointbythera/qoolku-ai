@@ -18,14 +18,17 @@ footer{padding:45px 0 25px;border-top:1px solid var(--line)}.footer-top{display:
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.typing span{animation:none}}
 
 .live-toolbar{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:24px}.live-status{color:var(--muted);font-size:14px}.live-grid{display:grid;grid-template-columns:280px 1fr;gap:22px}.requests{display:grid;gap:12px;align-content:start}.request{width:100%;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;text-align:left;cursor:pointer}.request[aria-pressed="true"]{border-color:var(--mint);background:#21352b}.request span{display:block;color:var(--muted);font-size:13px;margin-top:8px}.detail{min-width:0}.specs{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin:20px 0}.specs div{padding:12px 0;border-bottom:1px solid var(--line);overflow-wrap:anywhere}.specs dt{font-size:12px;color:var(--muted)}.specs dd{margin:4px 0 0}.result-status{display:inline-block;border:1px solid var(--line);border-radius:20px;padding:5px 12px;font-size:13px;color:var(--mint)}.price{font-size:36px;letter-spacing:-1px;color:var(--mint);font-weight:750;margin:12px 0}.cost-table{width:100%;border-collapse:collapse;margin-top:15px}.cost-table td{padding:9px 0;border-bottom:1px solid var(--line)}.cost-table td:last-child{text-align:right}.detail details{margin-top:20px}.detail summary{cursor:pointer;color:var(--mint)}.live-empty{padding:30px;color:var(--muted);border:1px dashed var(--line);border-radius:12px}.btn:disabled{opacity:.6;cursor:wait}@media(max-width:760px){.live-grid,.specs{grid-template-columns:1fr}.requests{grid-template-columns:1fr 1fr}.price{font-size:30px}}@media(max-width:440px){.requests{grid-template-columns:1fr}}
+
+.bp-team{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}.bp-cases{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.bp-output,.bp-memory{margin-top:20px}.bp-output ol{padding-left:22px}.bp-output li{margin:12px 0;color:var(--muted)}.bp-output strong{color:var(--text)}.bp-table{overflow-x:auto}.bp-table th{text-align:left;padding:10px 0;border-bottom:1px solid var(--line)}.bp-table td,.bp-table th{padding-right:15px}.bp-table caption{text-align:left;color:var(--mint);padding:15px 0;font-size:13px}.bp-memory summary{cursor:pointer;color:var(--mint);font-weight:700} @media(max-width:760px){.bp-team{grid-template-columns:1fr}.bp-cases{grid-template-columns:1fr 1fr}}@media(max-width:440px){.bp-cases{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav aria-label="Navigasi utama"><a class="brand" href="#home"><span class="mark" aria-hidden="true">Q</span>Qoolku AI</a><a class="navlink" href="#hasil">Lihat hasil workflow</a></nav>
+<nav aria-label="Navigasi utama"><a class="brand" href="#home"><span class="mark" aria-hidden="true">Q</span>Qoolku AI</a><div style="display:flex;gap:18px;flex-wrap:wrap"><a class="navlink" href="#hasil">Hasil workflow</a><a class="navlink" href="#blueprint">Agent Blueprint</a></div></nav>
 <main>
 <header class="hero" id="home">
-<div><div class="eyebrow">Asisten digital untuk quotation</div><div class="badge">🟢 Status: Active &amp; Ready 24/7</div><h1>Quotation<br><span>Made Simple.</span></h1><p class="lead">Dari chat customer ke spesifikasi yang jelas. Qoolku AI membantu mendeteksi informasi yang kurang, menyimulasikan costing, dan menyusun draft quotation.</p><a class="btn" href="#demo">Coba demo interaktif</a><p class="note">Demo workflow · Lihat hasil tersimpan di bawah</p></div>
+<div><div class="eyebrow">Asisten digital untuk quotation</div><div class="badge">Demo workflow &amp; Agent Blueprint</div><h1>Quotation<br><span>Made Simple.</span></h1><p class="lead">Dari chat customer ke spesifikasi yang jelas. Qoolku AI membantu mendeteksi informasi yang kurang, menyimulasikan costing, dan menyusun draft quotation.</p><a class="btn" href="#demo">Coba demo interaktif</a><p class="note">Demo workflow · Lihat hasil tersimpan di bawah</p></div>
 <div class="preview" aria-label="Contoh alur Qoolku AI"><div class="preview-top"><strong>Chat masuk, detail terurai.</strong><span class="pill">SIMULASI</span></div><p class="quote">“Mau pesan 100 box kemasan ukuran 20 × 15 × 8 cm.”</p><div class="flow"><span>01 / Spesifikasi</span><b>Terstruktur</b></div><div class="flow"><span>02 / Detail kurang</span><b>Terdeteksi</b></div><div class="flow"><span>03 / Quotation</span><b>Draft untuk ditinjau</b></div><small>Keputusan dan harga final tetap ditinjau manusia.</small></div>
 </header>
 <section aria-labelledby="problem-title"><div class="eyebrow">01 / Masalah &amp; solusi</div><h2 id="problem-title">Lebih jelas sejak chat pertama.</h2><div class="grid2"><article class="card"><h3>The Chaos</h3><ul><li>Spesifikasi customer sering tidak lengkap.</li><li>Perhitungan material dan costing masih manual.</li><li>Cek harga supplier memperlambat quotation.</li></ul></article><article class="card solution"><h3>The Solution</h3><ul><li>Ekstraksi detail pesanan dan pertanyaan untuk melengkapi spesifikasi.</li><li>Simulasi perhitungan dengan asumsi yang terlihat jelas.</li><li>Draft quotation dari harga input, dengan penanda harga yang perlu dikonfirmasi ke supplier.</li></ul></article></div></section>
@@ -38,6 +41,55 @@ footer{padding:45px 0 25px;border-top:1px solid var(--line)}.footer-top{display:
 <div class="live-toolbar"><span id="live-status" class="live-status" role="status" aria-live="polite">Memuat data demo…</span><button id="refresh" class="btn" type="button">Perbarui data</button></div>
 <div class="live-grid"><div id="requests" class="requests" aria-label="Pilih permintaan demo"></div><div id="detail" class="detail" aria-live="polite"><div class="live-empty">Mengambil hasil workflow…</div></div></div>
 </section>
+
+<section id="blueprint" aria-labelledby="blueprint-title">
+<div class="eyebrow">05 / Agent Blueprint · Week 5 &amp; 6</div>
+<h2 id="blueprint-title">Satu quotation, tim dengan peran yang jelas.</h2>
+<p class="note">Qoolku AI — Quotation Made Simple. Rancangan tim untuk membantu bisnis kemasan mengubah chat customer menjadi draft quotation yang dapat diperiksa.</p>
+<div class="badge">BLUEPRINT PENGEMBANGAN · SIMULASI INTERAKTIF</div>
+<div class="grid2">
+<article class="card"><h3>Masalah yang diselesaikan</h3><p>Spesifikasi customer tidak lengkap, costing masih manual, dan pengecekan harga supplier memperlambat penawaran. Targetnya: detail terkonfirmasi, sumber biaya terlacak, dan draft siap direview.</p></article>
+<article class="card solution"><h3>1 Orchestrator + 3 spesialis</h3><p>Pola supervisor dengan estafet kerja. Orchestrator mengatur perpindahan tugas, menahan proses ketika data kurang, dan mengembalikan draft yang perlu dikoreksi.</p></article>
+</div>
+<div class="bp-team">
+<article class="card"><span class="number">PENGARAH / ORCHESTRATOR</span><h3>Koordinasi &amp; keputusan alur</h3><p>Mencatat status pesanan dan versi spesifikasi. Memilih tugas berikutnya, meminta klarifikasi, dan meneruskan draft yang lolos review untuk persetujuan manusia.</p></article>
+<article class="card"><span class="number">AGEN 1 / SPECIFICATION ANALYST</span><h3>Pastikan detail pesanan jelas</h3><p>Input: chat customer dan jawaban klarifikasi. Output: spesifikasi terstruktur, informasi yang kurang, dan pertanyaan lanjutan. Tidak menebak bahan atau ukuran.</p></article>
+<article class="card"><span class="number">AGEN 2 / COSTING &amp; QUOTATION SPECIALIST</span><h3>Hitung dari referensi yang cocok</h3><p>Input: spesifikasi lengkap dan katalog biaya. Output: rincian biaya, sumber tarif, asumsi, dan draft quotation. Harga tidak tersedia atau kedaluwarsa harus dikonfirmasi.</p></article>
+<article class="card"><span class="number">AGEN 3 / QUOTATION REVIEWER</span><h3>Periksa sebelum disetujui</h3><p>Memeriksa satuan, cakupan tarif, perhitungan, markup, pajak dan ongkir. Output: draft lolos review atau daftar koreksi untuk agent terkait.</p></article>
+</div>
+<h3 style="margin-top:32px">Coba keputusan alur tim</h3>
+<p class="note">Pilih kasus untuk melihat rancangan penanganannya. Respons berikut sudah disiapkan sebagai simulasi blueprint.</p>
+<div class="bp-cases" role="group" aria-label="Skenario blueprint">
+<button type="button" class="scenario" data-blueprint="incomplete" aria-pressed="true">Spesifikasi belum lengkap</button>
+<button type="button" class="scenario" data-blueprint="ready" aria-pressed="false">Spesifikasi &amp; biaya cocok</button>
+<button type="button" class="scenario" data-blueprint="changed" aria-pressed="false">Spesifikasi berubah</button>
+<button type="button" class="scenario" data-blueprint="expired" aria-pressed="false">Harga kedaluwarsa</button>
+</div>
+<div id="blueprint-result" class="card bp-output" role="status" aria-live="polite"></div>
+<div class="grid2 bp-memory">
+<article class="card"><h3>Memori selama satu pesanan</h3><ul><li>Chat dan jawaban klarifikasi yang relevan.</li><li>Spesifikasi aktif, detail yang belum lengkap, serta status proses.</li><li>Versi draft dan koreksi reviewer.</li></ul></article>
+<article class="card"><h3>Memori lintas pesanan</h3><ul><li>Preferensi customer yang telah dikonfirmasi, dipisahkan per customer.</li><li>Referensi biaya: supplier, satuan, profil produk, jumlah, sumber, tanggal dan masa berlaku.</li><li>Aturan markup yang disetujui dan riwayat quotation beserta persetujuannya.</li></ul></article>
+</div>
+<p class="note">Aturan pembaruan memori: spesifikasi terbaru yang dikonfirmasi menggantikan versi aktif, dengan riwayat revisi tetap tercatat. Perubahan spesifikasi membatalkan costing lama. Harga lewat masa berlaku harus dicek ulang. Data customer tidak ditampilkan pada showcase publik.</p>
+<details class="card bp-memory"><summary>Referensi supplier dummy &amp; contoh perhitungan</summary>
+<p class="note">Profil BOX-TUCK-001: 500 folding box tuck end, ukuran dalam 20 × 15 × 8 cm, duplex 350 gsm, full color luar, laminasi doff luar, tanpa foil/emboss, desain dan dieline siap.</p>
+<div class="bp-table"><table class="cost-table"><caption>DATA DUMMY — UNTUK SIMULASI</caption><tbody>
+<tr><th scope="col">Komponen</th><th scope="col">Tarif</th><th scope="col">Biaya 500 box</th></tr>
+<tr><td>Material termasuk potong &amp; waste</td><td>Rp2.500/box</td><td>Rp1.250.000</td></tr>
+<tr><td>Cetak full color luar</td><td>Rp1.000/box</td><td>Rp500.000</td></tr>
+<tr><td>Laminasi doff luar</td><td>Rp500/box</td><td>Rp250.000</td></tr>
+<tr><td>Lem &amp; perakitan</td><td>Rp700/box</td><td>Rp350.000</td></tr>
+<tr><td>Setup termasuk pisau pond</td><td>Rp150.000/desain</td><td>Rp150.000</td></tr>
+<tr><td colspan="2">Biaya produksi</td><td>Rp2.500.000</td></tr>
+<tr><td colspan="2">Markup 25% atas biaya produksi</td><td>Rp625.000</td></tr>
+<tr><td colspan="2"><strong>Estimasi sebelum pajak &amp; ongkir</strong></td><td><strong>Rp3.125.000</strong></td></tr>
+</tbody></table></div>
+<p class="note">Rp6.250/box. Semua nama supplier dan tarif fiktif. Referensi hanya untuk profil dan jumlah di atas; 500 box bukan pernyataan MOQ. Tanggal data 30 Oktober 2026, berlaku sampai 30 November 2026 sebagai asumsi latihan. Material sudah mencakup potong dan waste. Tenggat produksi serta ongkir belum divalidasi.</p>
+<p class="note">Katalog kerja disimpan di Google Sheets. Perubahan pada sheet belum otomatis memperbarui angka contoh di website ini.</p>
+</details>
+<div class="card bp-memory"><h3>Persetujuan manusia &amp; batas implementasi</h3><p>Manusia memeriksa biaya, pajak, ongkir dan kelayakan deadline sebelum menyetujui pengiriman quotation. Jika ditolak, Orchestrator meminta revisi dengan alasan yang tercatat.</p><p class="note">Sudah didemokan pada Week 4: ekstraksi spesifikasi melalui n8n dan Gemini, penyimpanan hasil di Supabase, serta simulasi costing. Rancangan tim multi-agent, memori lintas pesanan, pengambilan tarif Google Sheets dan alur persetujuan di atas belum diimplementasikan sebagai otomasi.</p></div>
+</section>
+
 </main>
 <footer><div class="footer-top"><div><h2>Mulai dari spesifikasi yang jelas.</h2><p class="note">Coba alurnya sebelum menyusun quotation berikutnya.</p></div><a class="btn" href="#demo">Coba demo Qoolku AI</a></div><div class="credit">Built with AI · AI Builder Bootcamp Showcase</div></footer>
 </div>
@@ -118,6 +170,17 @@ async function loadRecords(){
 }
 refresh.addEventListener('click',loadRecords);
 loadRecords();
+
+
+const blueprintCases={
+ incomplete:{title:'Tahan costing. Lengkapi spesifikasi dulu.',steps:['Customer: “Mau 200 box hampers warna cream yang kelihatan premium.”','Specification Analyst mencatat jumlah dan warna. Model, ukuran, bahan, cetak, finishing, desain, deadline dan pengiriman perlu diklarifikasi. “Premium” bukan nama bahan.','Orchestrator mengirim daftar pertanyaan untuk dikonfirmasi. Agen costing belum mendapat tugas.'],outcome:'Output: pertanyaan klarifikasi. Belum ada harga.'},
+ ready:{title:'Referensi cocok. Siapkan draft untuk persetujuan.',steps:['Specification Analyst mengonfirmasi profil BOX-TUCK-001 sebanyak 500 box. Dalam skenario ini, deadline dan lokasi sudah disebutkan customer; kelayakan produksi tetap perlu dicek manusia.','Orchestrator memeriksa kecocokan profil, jumlah, satuan dan masa berlaku referensi dummy.','Costing Specialist menghitung Rp2.500.000 biaya produksi + Rp625.000 markup = Rp3.125.000, atau Rp6.250/box.','Reviewer memeriksa hitungan dan menandai pajak, ongkir serta kelayakan deadline yang belum divalidasi.'],outcome:'Output: draft simulasi sebelum pajak dan ongkir. Menunggu persetujuan manusia; belum dikirim.'},
+ changed:{title:'Revisi spesifikasi membatalkan costing lama.',steps:['Customer mengubah duplex 350 gsm menjadi ivory 400 gsm, atau menambah foil.','Specification Analyst mencatat revisi dan meminta konfirmasi spesifikasi baru.','Orchestrator menandai estimasi lama tidak berlaku. Referensi BOX-TUCK-001 tidak cocok dengan revisi.','Costing Specialist meminta tarif baru. Setelah tersedia, hitungan dan draft diperbarui lalu direview ulang.'],outcome:'Output: permintaan referensi harga baru. Harga lama tidak dipakai untuk spesifikasi berbeda.'},
+ expired:{title:'Konfirmasi harga sebelum menghitung.',steps:['Spesifikasi cocok, tetapi permintaan diproses setelah 30 November 2026, melewati masa berlaku referensi dummy.','Orchestrator menahan tahap costing dan meminta pembaruan harga melalui operator.','Supplier belum terintegrasi otomatis. Operator memasukkan harga, sumber dan masa berlaku yang baru.','Costing Specialist menghitung ulang setelah referensi diperbarui, lalu Reviewer memeriksa draft.'],outcome:'Output: harga perlu dikonfirmasi. Agent tidak mengarang tarif pengganti.'}
+};
+function showBlueprint(key){const data=blueprintCases[key];const box=document.getElementById('blueprint-result');const list=el('ol');data.steps.forEach(step=>list.append(el('li',step)));box.replaceChildren(el('h3',data.title),list,el('strong',data.outcome));document.querySelectorAll('[data-blueprint]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.blueprint===key)));}
+document.querySelectorAll('[data-blueprint]').forEach(b=>b.addEventListener('click',()=>showBlueprint(b.dataset.blueprint)));
+showBlueprint('incomplete');
 
 </script>
 </body>
